@@ -105,6 +105,14 @@ build CMakeFiles/DashKing.dir/PlayerInterface.cpp.o: CXX_COMPILER__DashKing_unsc
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
+build CMakeFiles/DashKing.dir/Platform.cpp.o: CXX_COMPILER__DashKing_unscanned_Debug /home/pete/CLionProjects/DashKing/Platform.cpp || cmake_object_order_depends_target_DashKing
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles/DashKing.dir/Platform.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/pete/CLionProjects/DashKing/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing/cmake-build-debug/_deps/fmt-src/include
+  OBJECT_DIR = CMakeFiles/DashKing.dir
+  OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DashKing
@@ -113,7 +121,7 @@ build CMakeFiles/DashKing.dir/PlayerInterface.cpp.o: CXX_COMPILER__DashKing_unsc
 #############################################
 # Link the executable DashKing
 
-build DashKing: CXX_EXECUTABLE_LINKER__DashKing_Debug CMakeFiles/DashKing.dir/main.cpp.o CMakeFiles/DashKing.dir/Player.cpp.o CMakeFiles/DashKing.dir/GameObject.cpp.o CMakeFiles/DashKing.dir/Scene.cpp.o CMakeFiles/DashKing.dir/NPC.cpp.o CMakeFiles/DashKing.dir/PlayerAnimations.cpp.o CMakeFiles/DashKing.dir/PlayerInterface.cpp.o | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-window-s-d.a /usr/lib/libX11.so /usr/lib/libXrandr.so /usr/lib/libXcursor.so _deps/sfml-build/lib/libsfml-system-s-d.a /usr/lib/libGL.so /usr/lib/libudev.so /usr/lib/libfreetype.so || _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build DashKing: CXX_EXECUTABLE_LINKER__DashKing_Debug CMakeFiles/DashKing.dir/main.cpp.o CMakeFiles/DashKing.dir/Player.cpp.o CMakeFiles/DashKing.dir/GameObject.cpp.o CMakeFiles/DashKing.dir/Scene.cpp.o CMakeFiles/DashKing.dir/NPC.cpp.o CMakeFiles/DashKing.dir/PlayerAnimations.cpp.o CMakeFiles/DashKing.dir/PlayerInterface.cpp.o CMakeFiles/DashKing.dir/Platform.cpp.o | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-window-s-d.a /usr/lib/libX11.so /usr/lib/libXrandr.so /usr/lib/libXcursor.so _deps/sfml-build/lib/libsfml-system-s-d.a /usr/lib/libGL.so /usr/lib/libudev.so /usr/lib/libfreetype.so || _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/fmt-build/libfmtd.a  _deps/sfml-build/lib/libsfml-window-s-d.a  /usr/lib/libX11.so  /usr/lib/libXrandr.so  /usr/lib/libXcursor.so  _deps/sfml-build/lib/libsfml-system-s-d.a  -lpthread  -lrt  /usr/lib/libGL.so  /usr/lib/libudev.so  -ldl  /usr/lib/libfreetype.so
   OBJECT_DIR = CMakeFiles/DashKing.dir

@@ -8,14 +8,15 @@
 #include "PlayerInterface.h"
 
 
-    Player::Player(sf::Vector2f sprite_cords, sf::Vector2f windowCords, std::string const& textureName)
-    : GameObject(sprite_cords, windowCords, textureName) {
+    Player::Player(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName)
+    : GameObject(sprite_cords, main_window, textureName) {
         health = 3;
         sprite.setOrigin(sprite.getLocalBounds().width / 2.f, sprite.getLocalBounds().height / 2.f );
-        sprite.setPosition(sf::Vector2f(200, windowCords.y - 349));
+        sprite.setPosition(sf::Vector2f(200, window.getSize().y - 349));
+
+
 //        animations(PlayerAnimations(texture, rect, sprite, clock));
 
-        interface = PlayerInterface();
     }
 
 
@@ -50,7 +51,7 @@
 
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            if (!isJumping) {
+            if (!isJumping ) {
                 isJumping = true;
                 yVelocity = -1000.0f; // Prędkość wzbicia się w górę
             }
@@ -61,7 +62,7 @@
            isRunning = true;
         }
 
-        if (isJumping) {
+        if (isJumping and !isOnPlatform ) {
             // Symulacja ruchu skoku
             float timeUnit = 0.002f; // Jeżeli nie chcemy pracować z Clock ustalamy wartość czasu
             //s = v * t +  0.5 * a * t^2
@@ -73,11 +74,12 @@
             yVelocity += gravity * timeUnit;
 
             // ziemia
-            if (sprite.getPosition().y >= cords.y - 108) {
+            if (sprite.getPosition().y >= cords.y - platformHeight) {
                 isJumping = false;
-                sprite.setPosition(sprite.getPosition().x, cords.y - 108);
+                sprite.setPosition(sprite.getPosition().x, cords.y -  platformHeight);
             }
         }
+
 
 
         if(isRunning and !isJumping)

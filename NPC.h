@@ -23,12 +23,15 @@ struct NPC : public GameObject {
 
     //IMPORTANT NPC COMPONETS
     int health = 3;
-    sf::RectangleShape viewRect;
+    sf::RectangleShape  viewRect;
     int viewRange = 20;
 
+    //ANIMATION VARIABLES
+    int attackAnimation_howManyTimes = 0;
 
 
-    NPC(sf::Vector2f sprite_cords, sf::Vector2f windowCords, std::string const& textureName);
+
+    NPC(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName);
 
     void npcMovementLeft();
     void npcMovementRight();
@@ -36,10 +39,15 @@ struct NPC : public GameObject {
 
 
     void standAnimation();
-    void attackAnimation();
+    void attackAnimation(int howManyTimes);
 
 //    void looking(Player& p);
     void walkPath(sf::Clock& globalClock);
+
+
+    //dodanie Player p wymaga pointerów, których jeszcze nie umiem
+    //void attackObject(Player& p);
+    void attackObject();
 
 //    sf::ConvexShape showHitbox();
 

@@ -5,17 +5,25 @@
 
 #include "PlayerInterface.h"
 
-PlayerInterface::PlayerInterface(){
-    auto heart = GameObject(sf::Vector2f(130,113), sf::Vector2f(0,0), "heart.png");
+#include "PlayerInterface.h"
 
-    hearts = std::vector<GameObject>{
-            heart, heart, heart
-    };
+PlayerInterface::PlayerInterface(sf::Window const& main_window)
+{
+    for(int i = 0; i < hearts.size(); i++ )
+    {
+        hearts[i] -> setPosition(sf::Vector2f(200,200 + (i * 100)));
+    }
 
-    int gapSize = 0;
+
+
+};
+
+PlayerInterface::~PlayerInterface()
+{
+
     for(auto heart : hearts)
     {
-        heart.setPosition(sf::Vector2f(20, 20 + gapSize));
-        gapSize += 20;
-    }
+       delete heart;
+    };
+
 }

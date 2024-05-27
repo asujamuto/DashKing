@@ -16,9 +16,12 @@ struct GameObject {
 
     sf::Vector2f cords;
 
-    GameObject(sf::Vector2f sprite_cords, sf::Vector2f windowCords, std::string const& textureName);
-    void setPosition(sf::Vector2f pos);
+    sf::Window window;
 
+    GameObject(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName);
+    GameObject(sf::Vector2f sprite_cords, sf::Vector2f window_cords, std::string const& textureName);
+    void setPosition(sf::Vector2f pos);
+    virtual ~GameObject();
 
 
 };

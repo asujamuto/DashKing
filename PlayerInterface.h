@@ -13,8 +13,14 @@
 struct PlayerInterface{
     //INITIALIZE HEARTS
 
-    std::vector<GameObject> hearts;
-    PlayerInterface();
+    std::vector<GameObject*> hearts = {
+            new GameObject(sf::Vector2f(130,113), sf::Vector2f(0,0), "assets/playerInterface/heart.png"),
+            new GameObject(sf::Vector2f(130,113), sf::Vector2f(0,0), "assets/playerInterface/heart.png"),
+            new GameObject(sf::Vector2f(130,113), sf::Vector2f(0,0), "assets/playerInterface/heart.png")
+    };
+
+    PlayerInterface(sf::Window const& main_window);
+    ~PlayerInterface();
 
 };
 

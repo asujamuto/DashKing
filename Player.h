@@ -21,28 +21,41 @@ struct Player : public GameObject {
     float yVelocity = 0.0f; // Prędkość po osi y
     float gravity = 2000.0f; // Wartość grawitacji
 
+    //Checkable Movement Variables
     bool isJumping = false;
     bool walk = false;
     bool attack = false;
     bool isRunning = false;
 
-    sf::RectangleShape attackRect;
+    //Checkable Interactions Variables
+    bool isOnPlatform = false;
+    int platformHeight = 108;
 
+    sf::RectangleShape attackRect;
+    sf::Window window;
 
     //IMPORTANT PLAYER COMPONETS
-    PlayerInterface interface;
+    PlayerInterface interface = PlayerInterface(window);
     int health;
 
     //Animations
     PlayerAnimations animations = PlayerAnimations(texture, rect, sprite, clock);
 
-    Player(sf::Vector2f sprite_cords, sf::Vector2f windowCords, std::string const& textureName);
+
+    Player(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName);
 
 
 
     void playerMovement();
 
     void playerAttack(sf::Clock clock);
+
+    void playerBorderCollision();
+
+    ~Player()
+    {
+        delete this;
+    }
 
 
 };

@@ -12,7 +12,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-568fb19bbf81f3233eff.json",
+					"jsonFile" : "directory-.-Debug-0adc06c6b3e1caccc51a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.27"
@@ -216,7 +216,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DashKing::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DashKing-Debug-eb930222a0b8b26218b4.json",
+					"jsonFile" : "target-DashKing-Debug-83beb505efa633c34799.json",
 					"name" : "DashKing",
 					"projectIndex" : 0
 				},

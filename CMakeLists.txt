@@ -32,6 +32,8 @@ add_executable(DashKing main.cpp
         PlayerAnimations.h
         PlayerInterface.cpp
         PlayerInterface.h
+        Platform.cpp
+        Platform.h
 )
 
 target_link_libraries(DashKing PUBLIC sfml-graphics)
