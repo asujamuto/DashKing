@@ -14,10 +14,16 @@ int main() {
 //    auto *p_ref = &p;
     auto floor = GameObject(sf::Vector2f(1920, 108), window, "assets/env/floor2.png");
     auto platform = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
+    auto platform2 = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
+    auto platform3 = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
     auto ladder = GameObject(sf::Vector2f(39,140), window, "assets/env/ladder.png");
 
     floor.setPosition(sf::Vector2f(0, window.getSize().y - floor.sprite.getTextureRect().height));
-    platform.setPosition(sf::Vector2f(window.getSize().x - 700, floor.sprite.getPosition().y - 200 ));
+
+    platform.setPosition(sf::Vector2f(100, floor.sprite.getPosition().y - 200 ));
+    platform2.setPosition(sf::Vector2f(400, floor.sprite.getPosition().y - 200 ));
+    platform3.setPosition(sf::Vector2f(700, floor.sprite.getPosition().y - 200 ));
+
     ladder.setPosition(sf::Vector2f(window.getSize().x - 700,  600));
     p -> setPosition(sf::Vector2f(0, floor.sprite.getPosition().y));
 
@@ -64,6 +70,9 @@ int main() {
         window.clear();
 
         platform.collision(p);
+//        platform2.collision(p);
+//        platform3.collision(p);
+
         p -> playerMovement();
 
         monster.attackObject();
@@ -86,6 +95,9 @@ int main() {
 
         window.draw(floor.sprite);
         window.draw(platform.sprite);
+//        window.draw(platform2.sprite);
+//        window.draw(platform3.sprite);
+
         window.draw(ladder.sprite);
         window.draw(monster.sprite);
         window.draw(xanathar.sprite);

@@ -103,7 +103,6 @@ void NPC::attackAnimation(int howManyTimes)
 
 void NPC::walkPath(sf::Clock& globalClock)
 {
-    fmt::println("czas: {}", globalClock.getElapsedTime().asSeconds());
     if(globalClock.getElapsedTime().asSeconds() <= 5.0f)
     {
         standAnimation();

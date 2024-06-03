@@ -28,8 +28,8 @@ struct Player : public GameObject {
     bool isRunning = false;
 
     //Checkable Interactions Variables
-    bool isOnPlatform = false;
-    int platformHeight = 108;
+    bool isOnGround = true;
+    float platformHeight = 108.0f;
 
     sf::RectangleShape attackRect;
     sf::Window window;

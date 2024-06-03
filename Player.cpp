@@ -41,9 +41,12 @@
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
             walk = true;
-            if (sprite.getScale().x > 0) {
+            if (sprite.getScale().x > 0)
+            {
                 sprite.move(sf::Vector2f(xVelocity, 0));
-            } else {
+            }
+            else
+            {
                 sprite.setOrigin(sprite.getLocalBounds().width / 2.f, sprite.getLocalBounds().height / 2.f);
                 sprite.setScale(1.f, 1.f);
                 setPosition(sf::Vector2f(sprite.getPosition().x, sprite.getPosition().y));
@@ -52,6 +55,7 @@
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
             if (!isJumping ) {
+                isOnGround = false;
                 isJumping = true;
                 yVelocity = -1000.0f; // Prędkość wzbicia się w górę
             }
@@ -62,23 +66,33 @@
            isRunning = true;
         }
 
-        if (isJumping and !isOnPlatform ) {
+        if (isJumping) {
             // Symulacja ruchu skoku
             float timeUnit = 0.002f; // Jeżeli nie chcemy pracować z Clock ustalamy wartość czasu
             //s = v * t +  0.5 * a * t^2
             float deltaY = yVelocity * timeUnit + 0.5f * gravity * timeUnit * timeUnit;
             sprite.move(0.0f, deltaY);
-            fmt::println("{}", deltaY);
-
             // Zastosowanie grawitacji
             yVelocity += gravity * timeUnit;
 
-            // ziemia
-            if (sprite.getPosition().y >= cords.y - platformHeight) {
-                isJumping = false;
-                sprite.setPosition(sprite.getPosition().x, cords.y -  platformHeight);
+            if(!isOnGround)
+            {
+                if (sprite.getPosition().y >= cords.y - platformHeight) {
+                    isJumping = false;
+                    sprite.setPosition(sprite.getPosition().x, cords.y -  platformHeight);
+                }
             }
+            // ziemia
+            else
+            {
+                if (sprite.getPosition().y >= cords.y - 108) {
+                    isJumping = false;
+                    sprite.setPosition(sprite.getPosition().x, cords.y -  108);
+                }
+            }
+
         }
+
 
 
 
