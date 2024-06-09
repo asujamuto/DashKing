@@ -2,15 +2,14 @@
 // Created by pete on 26.05.24.
 //
 
-#ifndef DASHKING_PLATFORM_H
-#define DASHKING_PLATFORM_H
-
+#pragma once
 #include "GameObject.h"
 #include "Player.h"
 
 struct Platform : public GameObject {
 
     bool is_collising;
+    bool current_platform;
 
     Platform(sf::Vector2f textureSize,
              sf::Window const& window,
@@ -18,9 +17,14 @@ struct Platform : public GameObject {
              bool colide
              );
 
-    void collision(Player* p);
+
+    int resolveCollision(GameObject& p);
+
+    ~Platform() override
+    {
+        delete this;
+    }
 
 };
 
 
-#endif //DASHKING_PLATFORM_H

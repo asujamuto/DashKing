@@ -1,22 +1,33 @@
 #include "SFML/Graphics.hpp"
 #include "fmt/core.h"
-#include <map>
 #include "GameObject.h"
 #include "Player.h"
 #include "NPC.h"
 #include "Platform.h"
 
+
 int main() {
     auto window = sf::RenderWindow(sf::VideoMode(1920, 1080), "Jump");
     auto globalClock = sf::Clock();
 
-    auto *p = new Player(sf::Vector2f(120.0f, 80.0f), window, "assets/sprites/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Idle.png");
-//    auto *p_ref = &p;
-    auto floor = GameObject(sf::Vector2f(1920, 108), window, "assets/env/floor2.png");
-    auto platform = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
+    auto p = Player(sf::Vector2f(120.0f, 80.0f), window, "assets/sprites/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Idle.png");
+
+
+    auto platforms = std::vector<GameObject*>();
+
+    auto floor = Platform(sf::Vector2f(1920, 108), window, "assets/env/floor2.png", true);
+    auto platform = Platform(sf::Vector2f(65, 234), window, "assets/env/block.png", true);
     auto platform2 = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
     auto platform3 = Platform(sf::Vector2f(234, 65), window, "assets/env/block.png", true);
     auto ladder = GameObject(sf::Vector2f(39,140), window, "assets/env/ladder.png");
+
+
+    platforms.push_back(&floor);
+    platforms.push_back(&platform);
+    platforms.push_back(&platform2);
+    platforms.push_back(&platform3);
+
+
 
     floor.setPosition(sf::Vector2f(0, window.getSize().y - floor.sprite.getTextureRect().height));
 
@@ -25,11 +36,11 @@ int main() {
     platform3.setPosition(sf::Vector2f(700, floor.sprite.getPosition().y - 200 ));
 
     ladder.setPosition(sf::Vector2f(window.getSize().x - 700,  600));
-    p -> setPosition(sf::Vector2f(0, floor.sprite.getPosition().y));
+    p.setPosition(sf::Vector2f(400, window.getSize().y - floor.sprite.getGlobalBounds().height));
 
-    for(auto heart : p -> interface.hearts)
+    for(auto heart : p.interface.hearts)
     {
-        heart -> sprite.setPosition(sf::Vector2f(p -> sprite.getPosition().x, p -> sprite.getPosition().y));
+        heart -> sprite.setPosition(sf::Vector2f(p. sprite.getPosition().x, p. sprite.getPosition().y));
     }
 
     auto monster = NPC(sf::Vector2f(150.0f, 200.0f), window, "assets/sprites/monster.png");
@@ -37,7 +48,7 @@ int main() {
     monster.sprite.setPosition(sf::Vector2f(200, floor.sprite.getPosition().y - 20));
 
     auto view = sf::View(
-            sf::Vector2f(p -> sprite.getPosition().x , p -> sprite.getPosition().y ),
+            sf::Vector2f(p. sprite.getPosition().x , p. sprite.getPosition().y ),
             sf::Vector2f(768, 432)
     );
 
@@ -51,10 +62,13 @@ int main() {
     auto pClock = sf::Clock();
     auto attackClock = sf::Clock();
 
+
+    auto jumpClock_main = sf::Clock();
+
     while(window.isOpen())
     {
 
-            view.setCenter(sf::Vector2f(p -> sprite.getPosition().x + 200, p -> sprite.getPosition().y - floor.sprite.getTextureRect().height));
+            view.setCenter(sf::Vector2f(p. sprite.getPosition().x + 200, p. sprite.getPosition().y - floor.sprite.getTextureRect().height));
             auto event = sf::Event();
 
             while (window.pollEvent(event)) {
@@ -63,27 +77,39 @@ int main() {
                     window.close();
                 }
                 else if(event.type == sf::Event::KeyPressed and event.key.code == sf::Keyboard::Q){
-                        p -> attack = true;
+                        p. attack = true;
                 }
             }
 
         window.clear();
 
-        platform.collision(p);
-//        platform2.collision(p);
-//        platform3.collision(p);
+        for(auto plat : platforms)
+        {
+            p.playerMovement(*plat, jumpClock_main);
+//            if( *plat -> resolveColliision(p) == 1  )
+//            {
+//                platform.current_platform = true;
+//            }
+//            if( *plat -> resolveColliision(p) == 0 )
+//            {
+//                platform.current_platform = false;
+//            }
+        }
 
-        p -> playerMovement();
+
+        platform.resolveCollision(p);
+        platform2.resolveCollision(p);
+        platform3.resolveCollision(p);
 
         monster.attackObject();
 
-        if(p -> attack)
+        if(p.attack)
         {
-            p -> playerAttack(globalClock);
-            p -> animations.attackAnimation(globalClock);
+            p.playerAttack(globalClock);
+            p.animations.attackAnimation(globalClock);
         }
 
-        p -> attack = false;
+        p.attack = false;
 
         monster.walkPath(globalClock);
 //        monster.standAnimation();
@@ -95,8 +121,8 @@ int main() {
 
         window.draw(floor.sprite);
         window.draw(platform.sprite);
-//        window.draw(platform2.sprite);
-//        window.draw(platform3.sprite);
+        window.draw(platform2.sprite);
+        window.draw(platform3.sprite);
 
         window.draw(ladder.sprite);
         window.draw(monster.sprite);
@@ -104,11 +130,11 @@ int main() {
         window.draw(monster.viewRect);
 //        window.draw(hitboxArea);
 
-        window.draw(p -> sprite);
-        window.draw(p -> attackRect);
+        window.draw(p.sprite);
+        window.draw(p.attackRect);
 
 //        window.draw(p.interface.hearts[0].sprite);
-        for(auto heart : p -> interface.hearts)
+        for(auto heart : p.interface.hearts)
         {
             window.draw(heart -> sprite);
         }

@@ -17,7 +17,6 @@ struct NPC : public GameObject {
     float yVelocity = 0.0f; // Prędkość po osi y
     float gravity = 1500.0f; // Wartość grawitacji
 
-    bool isJumping = false;
     bool walk = false;
     bool attack = false;
 

@@ -5,12 +5,10 @@
 
 #include "SFML/Graphics.hpp"
 #include "fmt/core.h"
-#include <map>
 #include "PlayerAnimations.h"
 #include "NPC.h"
-#include "Player.h"
 #include "PlayerInterface.h"
-
+#include "Platform.h"
 
 
 struct Player : public GameObject {
@@ -18,18 +16,18 @@ struct Player : public GameObject {
     const float DEFAULT_xVELOCITY = .2f;
     const float DEFAULT_yVELOCITY = 0.0f;
     float xVelocity = DEFAULT_xVELOCITY; // Prędkość po osi x
-    float yVelocity = 0.0f; // Prędkość po osi y
-    float gravity = 2000.0f; // Wartość grawitacji
+    float yVelocity = .1f; // Prędkość po osi y
+    float gravity = .4f; // Wartość grawitacji
 
     //Checkable Movement Variables
-    bool isJumping = false;
     bool walk = false;
     bool attack = false;
     bool isRunning = false;
 
     //Checkable Interactions Variables
-    bool isOnGround = true;
+    bool offGround = false;
     float platformHeight = 108.0f;
+    sf::Clock jumpClock;
 
     sf::RectangleShape attackRect;
     sf::Window window;
@@ -45,8 +43,7 @@ struct Player : public GameObject {
     Player(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName);
 
 
-
-    void playerMovement();
+    void playerMovement(GameObject& floor, sf::Clock & jumpClock_main);
 
     void playerAttack(sf::Clock clock);
 
@@ -54,7 +51,7 @@ struct Player : public GameObject {
 
     ~Player()
     {
-        delete this;
+        fmt::println("Player destroyed");
     }
 
 

@@ -3,9 +3,6 @@
 //
 #include <SFML/Graphics.hpp>
 #include "NPC.h"
-#include "GameObject.h"
-#include <functional>
-#include "Player.h"
 #include <fmt/core.h>
 
 

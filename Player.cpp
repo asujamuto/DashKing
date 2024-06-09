@@ -1,30 +1,33 @@
+
 #include "SFML/Graphics.hpp"
 #include "fmt/core.h"
 #include "fmt/ranges.h"
-#include <map>
-#include "GameObject.h"
 #include "Player.h"
 #include "NPC.h"
 #include "PlayerInterface.h"
+#include "Platform.h"
 
 
-    Player::Player(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName)
+Player::Player(sf::Vector2f sprite_cords, sf::Window const& main_window, std::string const& textureName)
     : GameObject(sprite_cords, main_window, textureName) {
         health = 3;
         sprite.setOrigin(sprite.getLocalBounds().width / 2.f, sprite.getLocalBounds().height / 2.f );
         sprite.setPosition(sf::Vector2f(200, window.getSize().y - 349));
 
-
 //        animations(PlayerAnimations(texture, rect, sprite, clock));
-
     }
 
 
 
 
-    void Player::playerMovement()
+    void Player::playerMovement(GameObject& floor, sf::Clock & jumpClock_main)
     {
-
+        if (
+             !(floor.sprite.getPosition().x + floor.sprite.getGlobalBounds().width < sprite.getPosition().x
+             && floor.sprite.getPosition().x > sprite.getPosition().x))
+        {
+           fmt::println("Out of the border");
+        }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         {
             walk = true;
@@ -53,12 +56,13 @@
             }
 
         }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            if (!isJumping ) {
-                isOnGround = false;
-                isJumping = true;
-                yVelocity = -1000.0f; // Prędkość wzbicia się w górę
-            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) and !offGround) {
+//            if (!isJumping ) {
+//                isJumping = true;
+//                yVelocity = -1000.0f; // Prędkość wzbicia się w górę
+//            }
+            sprite.move(0.f, -yVelocity);
+            offGround = true;
         }
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift))
@@ -66,37 +70,67 @@
            isRunning = true;
         }
 
-        if (isJumping) {
-            // Symulacja ruchu skoku
-            float timeUnit = 0.002f; // Jeżeli nie chcemy pracować z Clock ustalamy wartość czasu
-            //s = v * t +  0.5 * a * t^2
-            float deltaY = yVelocity * timeUnit + 0.5f * gravity * timeUnit * timeUnit;
-            sprite.move(0.0f, deltaY);
-            // Zastosowanie grawitacji
-            yVelocity += gravity * timeUnit;
+        float deltaY;
+        if (offGround) {
+            if(jumpClock_main.getElapsedTime().asSeconds() < .5)
+            {
+                deltaY = yVelocity + jumpClock_main.getElapsedTime().asSeconds() + .5f * gravity * jumpClock_main.getElapsedTime().asSeconds() * jumpClock_main.getElapsedTime().asSeconds();
+                yVelocity += gravity * jumpClock_main.getElapsedTime().asSeconds();
+                sprite.move(0.0f, -deltaY);
+                gravity = gravity / 2;
+            }
+            else if(jumpClock_main.getElapsedTime().asSeconds() >= .5) {
+                deltaY = yVelocity + jumpClock_main.getElapsedTime().asSeconds() +
+                         .5f * gravity * jumpClock_main.getElapsedTime().asSeconds() *
+                         jumpClock_main.getElapsedTime().asSeconds();
+                yVelocity += gravity * jumpClock_main.getElapsedTime().asSeconds();
+                sprite.move(0.0f, deltaY);
+                fmt::println("fall");
 
-            if(!isOnGround)
-            {
-                if (sprite.getPosition().y >= cords.y - platformHeight) {
-                    isJumping = false;
-                    sprite.setPosition(sprite.getPosition().x, cords.y -  platformHeight);
+                if (floor.sprite.getGlobalBounds().intersects(sprite.getGlobalBounds())) {
+                    offGround = false;
+                    jumpClock_main.restart();
                 }
+
+
             }
-            // ziemia
-            else
-            {
-                if (sprite.getPosition().y >= cords.y - 108) {
-                    isJumping = false;
-                    sprite.setPosition(sprite.getPosition().x, cords.y -  108);
-                }
-            }
+
+
+//            if(floor.sprite.getLocalBounds().intersects(sprite.getLocalBounds()))
+//            {
+//                offGround = false;
+//                jumpClock_main.restart();
+//            }
+
+            fmt::println("czas skoku: {}", jumpClock_main.getElapsedTime().asSeconds());
+
+            // Symulacja ruchu skoku
+//            float timeUnit = 0.002f; // Jeżeli nie chcemy pracować z Clock ustalamy wartość czasu
+//            //s = v * t +  0.5 * a * t^2
+//            float deltaY = yVelocity * timeUnit + 0.5f * gravity * timeUnit * timeUnit;
+//            sprite.move(0.0f, deltaY);
+//            // Zastosowanie grawitacji
+//            yVelocity += gravity * timeUnit;
+//
+//            if(offGround)
+//            {
+//                if (sprite.getPosition().y >= cords.y - platformHeight) {
+//                    isJumping = false;
+//                    sprite.setPosition(sprite.getPosition().x, cords.y -  platformHeight);
+//                }
+//            }
+//            // ziemia
+//            else
+//            {
+//                if (sprite.getPosition().y >= cords.y - 108) {
+//                    isJumping = false;
+//                    sprite.setPosition(sprite.getPosition().x, cords.y -  108);
+//                }
+//            }
 
         }
 
-
-
-
-        if(isRunning and !isJumping)
+        if(isRunning and !offGround)
         {
             xVelocity = DEFAULT_xVELOCITY*3;
             animations.walkAnimation();
@@ -107,10 +141,12 @@
             xVelocity = DEFAULT_xVELOCITY;
         }
 
-        if(walk and !isJumping and !isRunning)
+        if(walk and !offGround and !isRunning)
         {
-            animations.walkAnimation(); walk=false; isRunning=false; }
-        else if(isJumping)
+            animations.walkAnimation();
+            walk=false;
+        }
+        else if(offGround)
         {
             animations.jumpAnimation();
         }

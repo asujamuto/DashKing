@@ -18,9 +18,13 @@ clock(clock), texture(texture), rect(rect), sprite(sprite)
 void PlayerAnimations::standAnimation(){
     texture.loadFromFile(animationPath + "_Idle.png");
     if (clock.getElapsedTime().asSeconds() > .1f) {
-        if (rect.left == 1080)
+        if (rect.left == 1120)
         {
-            rect.left = 0;
+            rect.left = 40;
+            rect.width = 32;
+
+            rect.top = 40;
+            rect.height = 40;
         }
         else
         {
@@ -35,9 +39,14 @@ void PlayerAnimations::standAnimation(){
 void PlayerAnimations::walkAnimation(){
     texture.loadFromFile(animationPath + "_Run.png");
     if (clock.getElapsedTime().asSeconds() > .1f) {
-        if (rect.left == 1080)
+        if (rect.left >= 1120)
         {
-            rect.left = 0;
+            rect.left = 40;
+            rect.width = 32;
+
+            rect.top = 40;
+            rect.height = 40;
+
         }
         else
         {
@@ -51,7 +60,10 @@ void PlayerAnimations::walkAnimation(){
 
 void PlayerAnimations::jumpAnimation() {
     texture.loadFromFile(animationPath + "_Jump.png");
-    rect.left = 120;
+    rect.left = 40;
+    rect.width = 32;
+    rect.top = 40;
+    rect.height = 40;
     sprite.setTextureRect(rect);
 }
 
@@ -60,7 +72,10 @@ void PlayerAnimations::attackAnimation(sf::Clock& globalClock) {
     if (clock.getElapsedTime().asSeconds() > .5f) {
         if (rect.left >= 480)
         {
-            rect.left = 0;
+            rect.left   = 40;
+            rect.width  = 32;
+            rect.top    = 40;
+            rect.height = 40;
         }
         else
         {
@@ -94,7 +109,11 @@ void PlayerAnimations::dashAnimaton(){
 void PlayerAnimations::alternativeAttackAnimation()
 {
     texture.loadFromFile(animationPath + "_Attack2.png");
-    rect.left = 240;
+//    rect.left = 240;
+    rect.left   = 270;
+    rect.width  = 80;
+    rect.top    = 40;
+    rect.height = 40;
     sprite.setTextureRect(rect);
 
 }
