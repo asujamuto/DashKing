@@ -1,0 +1,9 @@
+/home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/pete/clion-2023.3.4/bin/ninja/linux/x64/ninja -G Ninja -S /home/pete/CLionProjects/DashKing_v2 -B /home/pete/CLionProjects/DashKing_v2/cmake-build-debug
+-- Version: 10.2.1
+-- Build type: Debug
+-- libudev stable: 1
+-- Found UDev: /usr/lib/libudev.so
+--    include: /usr/include
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/pete/CLionProjects/DashKing_v2/cmake-build-debug
