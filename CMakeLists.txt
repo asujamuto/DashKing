@@ -23,8 +23,8 @@ add_executable(DashKing main.cpp
         Utils.cpp
         Utils.h
         Player.cpp
-        Map.cpp
-        Map.h
+        MapsConnector.cpp
+        MapsConnector.h
         GameObject.cpp
         GameObject.h
         Platform.cpp
@@ -34,7 +34,12 @@ add_executable(DashKing main.cpp
         Collectible.cpp
         Platform.cpp
         Spike.cpp
-        Spike.h)
+        Spike.h
+        Map.cpp
+        Map.h
+        Enemy.cpp
+        Enemy.h
+        MapsConnector.cpp)
 
 
 target_link_libraries(DashKing PUBLIC sfml-graphics)

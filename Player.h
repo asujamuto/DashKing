@@ -9,6 +9,7 @@
 #include <vector>
 #include "Utils.h"
 #include "Platform.h"
+#include "Map.h"
 
 
 class Player {
@@ -24,6 +25,7 @@ class Player {
         const float JUMP_STRENGTH = -350.0f;
         const float MOVE_SPEED = 200.0f;
         const float RUN_SPEED = 400.0f;
+        bool dead = false;
 
         sf::RectangleShape sprite;
         std::vector <sf::RectangleShape> health;
@@ -41,10 +43,15 @@ class Player {
               std::vector <Platform>& platforms
               );
 
+
+
     //Interface
 
 
     //health
+    int getHearts();
+    int changeHeartsAmount(int amount = 0);
+
 
 
     //coins

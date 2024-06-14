@@ -17,6 +17,7 @@ class Utils {
 
     public:
         static bool resolveCollision(sf::RectangleShape& player, const sf::RectangleShape& platform, float& velocityY);
+        static bool isColliding(sf::RectangleShape& player, const sf::RectangleShape& shape);
 
 //    static bool isColliding(const & Player A, const & Collectible  B);
 //    static bool isColliding(const  GameObject<sf::RectangleShape>& A, const  GameObject<sf::RectangleShape>& B);

@@ -1,56 +1,38 @@
 //
-// Created by pete on 10.06.24.
+// Created by pete on 13.06.24.
 //
-
-#pragma once
 
 #ifndef DASHKING_MAP_H
 #define DASHKING_MAP_H
-#include <vector>
 
-#include <SFML/Graphics.hpp>
-#include "GameObject.h"
-#include <memory>
+#pragma once
+#include "SFML/Graphics.hpp"
 #include "Platform.h"
-#include "Player.h"
-#include <fstream>
-
+#include "Collectible.h"
 
 class Map {
 
-    public:
-        std::unique_ptr<sf::RenderWindow> window = nullptr;
-        std::vector<Platform> platforms;
-        std::vector< std::vector<Platform> > maps;
 
+public:
+    std::vector <Platform> platforms;
+    std::vector <Collectible> collectibles;
+//    std::vector <Enemies> enemies;
+//    std::vector <Obstacle> obstacles
 
-        int current_map = 0;
-        sf::Clock clock;
+    bool wasShown = false;
+    sf::Clock mapClock;
 
+    Map(std::vector <Platform> tmp_platforms);
+//    void appendPlatforms(std::vector<Platform> platforms);
 
-        Map(sf::RenderWindow& main_window)
-        {
-            window = std::unique_ptr<sf::RenderWindow>(&main_window);
-            clock = sf::Clock();
-        };
+    std::vector<Collectible> removeCollectible(Collectible& collectible);
+    std::vector<Collectible> generateObjects();
 
-        void update(Platform& plat, Player & player);
+    std::vector<Collectible> updateObjects();
 
-        std::vector<Platform> change(int map);
-        std::vector<std::vector<Platform>> generateMaps();
+    std::vector<Platform> getPlatforms();
 
-
-//        std::vector<Platform>& map_swap(Player & player);
-
-//        std::vector<Platform> import(std::string file);
-
-        ~Map()
-        {
-            delete this;
-        }
 };
-
-
 
 
 #endif //DASHKING_MAP_H

@@ -8,7 +8,7 @@
 #pragma once
 #include "GameObject.h"
 
-class Spike : GameObject<sf::CircleShape> {
+class Spike : public GameObject<sf::CircleShape> {
 
 
     public:

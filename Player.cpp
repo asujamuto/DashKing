@@ -74,6 +74,15 @@ void Player::movement(sf::Clock& clock, std::vector<Platform>& platforms)
 
 }
 
+int Player::getHearts() {
+    return hearts;
+}
+
+int Player::changeHeartsAmount(int amount) {
+    hearts = hearts - amount;
+    return hearts;
+}
+
 int Player::getCoins() {
     return coins;
 }

@@ -47,6 +47,10 @@ bool Utils::resolveCollision(sf::RectangleShape& player, const sf::RectangleShap
     return false;
 }
 
+bool Utils::isColliding(sf::RectangleShape &player, const sf::RectangleShape &shape) {
+    return player.getGlobalBounds().intersects(shape.getGlobalBounds());
+}
+
 //isColliding for collectibles (coins, keys etc.)
 //bool Utils::isColliding(const & Player  A, const &  Collectible  B) {
 //    return A.sprite.getGlobalBounds().intersects(B.shape.getGlobalBounds());

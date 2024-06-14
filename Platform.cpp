@@ -9,12 +9,16 @@ Platform::Platform(sf::Vector2f size, sf::Vector2f position, const std::string n
 : GameObject(size, position)
 {
     name_id = name;
-//    generateCollectibles();
+    collectibles = generateObjects();
+
 }
 
 std::vector<Collectible> Platform::generateObjects()
 {
     //generate obstacles
+    if(wasShown == false)
+    {
+
     for(int i = 0; i < 2; i++)
     {
         spikes.push_back(
@@ -31,8 +35,14 @@ std::vector<Collectible> Platform::generateObjects()
         );
     }
 
+        wasShown = true;
+        return collectibles;
+    }
+    else
+    {
+       return collectibles;
+    }
 
-    return collectibles;
 }
 
 std::vector<Collectible> Platform::removeCollectible(Collectible& collectible)

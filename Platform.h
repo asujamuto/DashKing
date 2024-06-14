@@ -16,6 +16,7 @@ class Platform : public GameObject<sf::RectangleShape> {
         std::string name_id;
         std::vector<Collectible> collectibles;
         std::vector<Spike> spikes;
+        bool wasShown = false;
 
         Platform(sf::Vector2f size = sf::Vector2f(500, 30), sf::Vector2f position = sf::Vector2f(0, 0), std::string name = "defualt");
 
