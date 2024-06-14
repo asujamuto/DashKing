@@ -13,13 +13,13 @@
 // Main function
 int main()
 {
-    Player player = Player();
+
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Dash King");
     // Set the frame rate limit
     window.setFramerateLimit(60);
 
-
+    //Connecting All Maps In One
     MapsConnector mapConnector = MapsConnector(window);
 
     std::vector<Platform> map0 = {
@@ -61,8 +61,9 @@ int main()
     mapConnector.maps.emplace_back(map1);
     mapConnector.maps.emplace_back(map2);
     mapConnector.maps.emplace_back(map3);
-    auto map = mapConnector.maps[mapConnector.current_map];
+    Map map = mapConnector.maps[mapConnector.current_map];
 
+    Player player = Player();
 //    auto maps = map1.generateMaps();
     std::vector<Collectible> collectibles;
     std::vector<sf::RectangleShape> hearts = player.Interface(window);
@@ -102,9 +103,6 @@ int main()
         // Clear the screen
         window.clear();
 
-        player.movement(clock, map.platforms);
-
-
         for(auto & heart : hearts)
         {
             window.draw(heart);
@@ -113,8 +111,15 @@ int main()
         //draw special platforms
         for(auto & plat : map.getPlatforms())
         {
-            mapConnector.update(plat, player);
+            mapConnector.updatePlatform(plat, player);
         }
+        mapConnector.updateMap();
+        std::vector<Platform> plats = map.platforms;
+        player.movement(clock, plats);
+
+
+
+
 
         // Draw the player
         window.draw(player.sprite);
@@ -125,18 +130,24 @@ int main()
             window.draw(platform.shape);
 
             // Manage collectibles
-            for(int i = 0; i < platform.collectibles.size(); i++)
-            {
-                window.draw(platform.collectibles[i].shape);
-                if(player.sprite.getGlobalBounds().intersects(platform.collectibles[i].shape.getGlobalBounds()))
-                {
-                    platform.removeCollectible(platform.collectibles[i]);
-                    player.addCoins();
-                    fmt::println("touching {}", i);
-                }
-
-
-            }
+//            for(int i = 0; i < platform.collectibles.size(); i++)
+//            {
+////                window.draw(platform.collectibles[i].shape);
+//                if(player.sprite.getGlobalBounds().intersects(platform.collectibles[i].shape.getGlobalBounds()))
+//                {
+//                    platform.removeCollectible(platform.collectibles[i]);
+//                    player.addCoins();
+//                    fmt::println("touching {}", i);
+//                }
+//
+//
+//            }
+//
+//            for(int i = 0; i < map.collectibles.size(); i++)
+//            {
+//                map.collect(player, i);
+//            }
+//            map.collect(player, mapConnector.current_map);
 
 
 

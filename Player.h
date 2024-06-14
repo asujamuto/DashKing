@@ -5,11 +5,11 @@
 #ifndef DASHKING_PLAYER_H
 #define DASHKING_PLAYER_H
 
+//#pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "Utils.h"
 #include "Platform.h"
-#include "Map.h"
 
 
 class Player {
@@ -40,7 +40,7 @@ class Player {
     }
 
     void movement(sf::Clock& deltaTime,
-              std::vector <Platform>& platforms
+              std::vector<Platform>   platforms
               );
 
 

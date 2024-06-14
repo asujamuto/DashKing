@@ -9,14 +9,16 @@
 #include "GameObject.h"
 #include "Collectible.h"
 #include "Spike.h"
+#include "Player.h"
 
 class Platform : public GameObject<sf::RectangleShape> {
 
     public:
         std::string name_id;
-        std::vector<Collectible> collectibles;
+//        std::vector<Collectible> collectibles;
         std::vector<Spike> spikes;
         bool wasShown = false;
+        bool drawable = true;
 
         Platform(sf::Vector2f size = sf::Vector2f(500, 30), sf::Vector2f position = sf::Vector2f(0, 0), std::string name = "defualt");
 
@@ -26,10 +28,10 @@ class Platform : public GameObject<sf::RectangleShape> {
             return shape;
         }
 
-        std::vector<Collectible> removeCollectible(Collectible& collectible);
-        std::vector<Collectible> generateObjects();
+//        std::vector<Collectible> removeCollectible(Collectible& collectible);
+//        std::vector<Collectible> generateObjects();
 
-        std::vector<Collectible> updateObjects();
+//        std::vector<Collectible> updateObjects();
 
 
 

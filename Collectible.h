@@ -6,6 +6,7 @@
 //#define DASHKING_COLLECTIBLE_H
 #pragma once
 #include "GameObject.h"
+#include "Player.h"
 
 class Collectible : public GameObject<sf::CircleShape>
 {
@@ -13,12 +14,14 @@ class Collectible : public GameObject<sf::CircleShape>
     public:
         int id;
         bool collected = false;
+        bool drawable = true;
 
         Collectible(float radius, sf::Vector2f position, int n) : GameObject<sf::CircleShape>(radius, position)
         {
             id = n;
             shape.setFillColor(sf::Color::Yellow);
         }
+
 
 //        auto hide()
 //        {

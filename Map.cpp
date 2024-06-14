@@ -12,7 +12,14 @@ Map::Map(std::vector <Platform> tmp_platforms)
    generateObjects();
 }
 
-
+//void Map::collect(Player & player, int index)
+//{
+//    if(player.sprite.getGlobalBounds().intersects(collectibles[index].shape.getGlobalBounds()))
+//    {
+//        collectibles.erase(collectibles.begin() + index, collectibles.end() + index);
+//        player.addCoins();
+//    }
+//}
 
 std::vector<Collectible> Map::generateObjects()
 {
@@ -43,7 +50,7 @@ std::vector<Collectible> Map::generateObjects()
 
                     collectibles.push_back(
 //                        Collectible(8, sf::Vector2f((shape.getPosition().x + shape.getSize().x) - ((i*30)+ 40), shape.getPosition().y - 20), (i+1)*10)
-                        Collectible(8, sf::Vector2f(lowerBound + (std::rand() % (higherBound - lowerBound) + 1), 20), (i+1)+(10*j))
+                        Collectible(8, sf::Vector2f(lowerBound + (std::rand() % (higherBound - lowerBound) + 1), platforms[j].shape.getPosition().y - 20), (i+1)+(10*j))
                     );
 
 //                    collectibles[collectibles.size() -1].shape.setPosition(lowerBound + (std::rand() % (higherBound - lowerBound) + 1), 20);

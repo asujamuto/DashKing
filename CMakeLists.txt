@@ -22,6 +22,7 @@ FetchContent_MakeAvailable(fmt SFML)
 add_executable(DashKing main.cpp
         Utils.cpp
         Utils.h
+        Player.h
         Player.cpp
         MapsConnector.cpp
         MapsConnector.h

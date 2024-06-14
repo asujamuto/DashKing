@@ -49,10 +49,12 @@ class MapsConnector {
             clock = sf::Clock();
         };
 
-        void update(Platform& plat, Player & player);
+        void updatePlatform(Platform& plat, Player & player);
 
-        std::vector<Platform> change(int map);
-        void generateMaps();
+        void updateMap();
+
+//        std::vector<Platform> change(int map);
+//        void generateMaps();
 
 
 //        std::vector<Platform>& map_swap(Player & player);
