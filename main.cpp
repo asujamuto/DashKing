@@ -99,26 +99,36 @@ int main()
         //clear the screen
         window.clear();
 
-//        for(auto & c : map.collectibles)
-//        {
-//            fmt::println("{}", c.id);
-//            window.draw(c.shape);
-//            map.removeCollectible(c);
-//            player.addCoins();
-//        }
-        for (auto it = collectibles.begin(); it != collectibles.end(); /* no increment here */) {
-            fmt::println("Coin: {}", it->id);
-            if(player.sprite.getGlobalBounds().intersects(it -> shape.getGlobalBounds()))
+        for(auto & c : map.collectibles)
+        {
+            if(player.sprite.getGlobalBounds().intersects(c->shape.getGlobalBounds()))
             {
-                player.addCoins();
-                it = map.removeCollectible(it);
+                fmt::println("Collected coins: {}, Coin id: {}", player.getCoins(), c -> id);
+
+//                map.removeCollectible(*c);
+                player.addCoins(1, c -> collectable);
+                c->collectable= false;
+                c = nullptr;
             }
-            else
+            else if(c->collectable)
             {
-                window.draw(it->shape);
+                window.draw(c -> shape);
             }
 
         }
+//        for (auto it = collectibles.begin(); it != collectibles.end(); /* no increment here */) {
+//            fmt::println("Coin: {}", it->id);
+//            if(player.sprite.getGlobalBounds().intersects(it -> shape.getGlobalBounds()))
+//            {
+//                player.addCoins();
+////                it = map.removeCollectible(it);
+//            }
+//            else
+//            {
+//                window.draw(it->shape);
+//            }
+//
+//        }
 
         window.draw(player.sprite);
 

@@ -87,8 +87,11 @@ int Player::getCoins() {
     return coins;
 }
 
-int Player::addCoins(int amount) {
-    coins += amount;
+int Player::addCoins(int amount, bool collectable) {
+    if(collectable)
+    {
+        coins += amount;
+    }
     return coins;
 }
 

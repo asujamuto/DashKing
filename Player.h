@@ -54,7 +54,7 @@ class Player {
 
     //coins
     int getCoins();
-    int addCoins(int amount = 1);
+    int addCoins(int amount = 1, bool collectable = true);
 
     std::vector<sf::RectangleShape> Interface(const sf::RenderWindow & window);
 

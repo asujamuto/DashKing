@@ -13,7 +13,7 @@ class Collectible : virtual public GameObject<sf::CircleShape>
     public:
         int id;
         bool collected = false;
-        bool drawable = true;
+        bool collectable = true;
 
         Collectible(float radius, sf::Vector2f position, int n) : GameObject<sf::CircleShape>(radius, position)
         {

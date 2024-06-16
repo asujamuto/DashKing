@@ -16,7 +16,7 @@ class Map {
 
 public:
     std::vector <Platform> platforms;
-    std::vector <Collectible> collectibles;
+    std::vector <Collectible*> collectibles;
 //    std::vector <Enemies> enemies;
 //    std::vector <Obstacle> obstacles;
 //    int collectiblesMainVectorIndex_start;
@@ -29,12 +29,12 @@ public:
 
     void collect(Player & player, int i);
 
-    std::vector<Collectible> removeCollectible(Collectible& collectible);
-    std::vector<Collectible>::iterator removeCollectible(std::vector<Collectible>::iterator it);
+    std::vector<Collectible*> removeCollectible(Collectible& collectible);
+//    std::vector<Collectible*>::iterator removeCollectible(std::vector<Collectible>::iterator it);
 
-    std::vector<Collectible> generateObjects();
+    std::vector<Collectible*> generateObjects();
 
-    std::vector<Collectible> updateObjects();
+    std::vector<Collectible*> updateObjects();
 
     std::vector<Platform> getPlatforms();
 
