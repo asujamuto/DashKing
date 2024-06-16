@@ -3,7 +3,7 @@
 //
 
 #include "Player.h"
-
+#include <fmt/core.h>
 void Player::movement(sf::Clock& clock, std::vector<Platform> & platforms)
 {
     // Get the time since the last frame
@@ -78,8 +78,13 @@ int Player::getHearts() {
     return hearts;
 }
 
-int Player::changeHeartsAmount(int amount) {
+int Player::changeHeartsAmount(int amount)
+{
     hearts = hearts - amount;
+    if(hearts < 3)
+    {
+        fmt::println("Game over");
+    }
     return hearts;
 }
 
@@ -106,4 +111,26 @@ std::vector<sf::RectangleShape> Player::Interface(const sf::RenderWindow & windo
     }
 
     return health;
+}
+void Player::attack()
+{
+
+    sf::RectangleShape rectangle(sf::Vector2f(120, 50));
+
+    rectangle.setSize(sf::Vector2f(20, 100));
+    rectangle.setFillColor(sf::Color::Yellow);
+
+    if(sprite.getScale().x < 0)
+    {
+        rectangle.setPosition(sprite.getPosition().x - sprite.getSize().x - 20, sprite.getPosition().y);
+    }
+    else
+    {
+        rectangle.setPosition(sprite.getPosition().x + sprite.getSize().x + 20, sprite.getPosition().y);
+    }
+    attackRectangle = rectangle;
+
+
+
+
 }

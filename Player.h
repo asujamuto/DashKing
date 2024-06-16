@@ -30,7 +30,7 @@ class Player {
         sf::RectangleShape sprite;
         std::vector <sf::RectangleShape> health;
 
-
+        sf::RectangleShape attackRectangle;
     Player()
     {
         sf::RectangleShape player(sf::Vector2f(30, 40));
@@ -56,6 +56,7 @@ class Player {
     int getCoins();
     int addCoins(int amount = 1, bool collectable = true);
 
+    void attack();
     std::vector<sf::RectangleShape> Interface(const sf::RenderWindow & window);
 
 };

@@ -20,6 +20,7 @@ void Enemy::doDamage(Player &player) {
 //        {
             player.sprite.move(-30, 0);
             player.changeHeartsAmount(1);
+
 //        }
     }
 }
@@ -38,4 +39,15 @@ void Enemy::move()
     {
         movementClock.restart();
     }
+}
+
+int Enemy::getHearts()
+{
+    return health;
+}
+
+int Enemy::changeHeartsAmount(int amount)
+{
+    health = health - 1;
+    return health;
 }

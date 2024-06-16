@@ -10,6 +10,7 @@
 #include "SFML/Graphics.hpp"
 #include "Platform.h"
 #include "Collectible.h"
+#include "Enemy.h"
 
 class Map {
 
@@ -17,7 +18,7 @@ class Map {
 public:
     std::vector <Platform> platforms;
     std::vector <Collectible*> collectibles;
-//    std::vector <Enemies> enemies;
+    std::vector <Enemy*> enemies;
 //    std::vector <Obstacle> obstacles;
 //    int collectiblesMainVectorIndex_start;
 //    int collectiblesMainVectorIndex_stop;

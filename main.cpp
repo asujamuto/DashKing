@@ -24,15 +24,14 @@ int main()
     MapsConnector mapConnector = MapsConnector(window);
 
     std::vector<Platform> map0 = {
-            Platform(sf::Vector2f(window.getSize().x, window.getSize().y), sf::Vector2f(0, 550), "platform")
+            Platform(sf::Vector2f(window.getSize().x, window.getSize().y), sf::Vector2f(0, 550), "enemyPlatform")
     };
     std::vector<Platform> map1 = {
-
             Platform(sf::Vector2f(200, window.getSize().y), sf::Vector2f(0, 550), "platform"),
-            Platform(sf::Vector2f(200, window.getSize().y), sf::Vector2f(200,400), "platform1"),
-            Platform(sf::Vector2f(200, window.getSize().y), sf::Vector2f(400,300), "platform"),
-            Platform(sf::Vector2f(500, 40), sf::Vector2f(600, 500), "platform"),
-            Platform(sf::Vector2f(500, 40), sf::Vector2f(1200, 640), "lift"),
+            Platform(sf::Vector2f(200, window.getSize().y), sf::Vector2f(200,400), "default"),
+            Platform(sf::Vector2f(200, window.getSize().y), sf::Vector2f(400,300), "default"),
+            Platform(sf::Vector2f(500, 40), sf::Vector2f(600, 500), "enemyPlatform"),
+            Platform(sf::Vector2f(500, 40), sf::Vector2f(1200, 840), "lift"),
             Platform(sf::Vector2f(500, 40), sf::Vector2f(600, 900), "platform"),
             Platform(sf::Vector2f(500, 60), sf::Vector2f(window.getSize().x - 200, window.getSize().y - 240), "platform"),
 
@@ -41,9 +40,9 @@ int main()
     std::vector map2 = {
             Platform(sf::Vector2f(500, 30), sf::Vector2f(-50, window.getSize().y - 240), "platform"),
             Platform(sf::Vector2f(200, 20), sf::Vector2f(250,200), "platform"),
-            Platform(sf::Vector2f(200, 20), sf::Vector2f(550,500), "lift"),
+            Platform(sf::Vector2f(200, 20), sf::Vector2f(550,800), "lift"),
             Platform(sf::Vector2f(500, 20), sf::Vector2f(650, 920), "platform"),
-            Platform(sf::Vector2f(500, 40), sf::Vector2f(1200, window.getSize().y - 400), "lift"),
+            Platform(sf::Vector2f(500, 40), sf::Vector2f(1200, 800), "lift"),
             Platform(sf::Vector2f(500, 40), sf::Vector2f(1920 - 200, window.getSize().y - 700), "platform"),
     };
 
@@ -56,12 +55,16 @@ int main()
             Platform(sf::Vector2f(500, 30), sf::Vector2f(1200, 200), "platform"),
 
     };
+    std::vector<Platform> map4 = {
+            Platform(sf::Vector2f(window.getSize().x, window.getSize().y), sf::Vector2f(0, 550), "bossMap")
+    };
 
     //push back KOPIUJE obiek, a emplace_back dodaje go bezpośrednio do vectora
     mapConnector.maps.emplace_back(map0);
     mapConnector.maps.emplace_back(map1);
     mapConnector.maps.emplace_back(map2);
     mapConnector.maps.emplace_back(map3);
+    mapConnector.maps.emplace_back(map4);
     Map map = mapConnector.maps[mapConnector.current_map];
 
     Player player = Player();
@@ -70,22 +73,14 @@ int main()
     std::vector<sf::RectangleShape> hearts = player.Interface(window);
     Enemy enemy = Enemy(sf::Vector2f(30, 40), sf::Vector2f(600, 550 - 40), 3);
 
-
-
-
-    // Clock for timing
     sf::Clock clock;
+    bool attack = false;
 
 
-
-
-
-    // Main loop
     while (window.isOpen())
     {
 
 
-        // Process events
         sf::Event event;
 
         while (window.pollEvent(event))
@@ -94,41 +89,22 @@ int main()
             {
                 window.close();
             }
+
+            if(event.type == sf::Event::KeyPressed and event.key.code == sf::Keyboard::Q){
+                attack = true;
+                fmt::println("Q pressed");
+                fmt::println("Attack rect x {}", player.attackRectangle.getPosition().x);
+                fmt::println("Attack rect y {}", player.attackRectangle.getPosition().y);
+                window.draw(player.attackRectangle);
+                player.attack();
+            }
+
         }
 
         //clear the screen
         window.clear();
 
-        for(auto & c : map.collectibles)
-        {
-            if(player.sprite.getGlobalBounds().intersects(c->shape.getGlobalBounds()))
-            {
-                fmt::println("Collected coins: {}, Coin id: {}", player.getCoins(), c -> id);
 
-//                map.removeCollectible(*c);
-                player.addCoins(1, c -> collectable);
-                c->collectable= false;
-                c = nullptr;
-            }
-            else if(c->collectable)
-            {
-                window.draw(c -> shape);
-            }
-
-        }
-//        for (auto it = collectibles.begin(); it != collectibles.end(); /* no increment here */) {
-//            fmt::println("Coin: {}", it->id);
-//            if(player.sprite.getGlobalBounds().intersects(it -> shape.getGlobalBounds()))
-//            {
-//                player.addCoins();
-////                it = map.removeCollectible(it);
-//            }
-//            else
-//            {
-//                window.draw(it->shape);
-//            }
-//
-//        }
 
         window.draw(player.sprite);
 
@@ -141,13 +117,15 @@ int main()
 
 
 
-        enemy.move();
-        enemy.doDamage(player);
-        window.draw(enemy.shape);
-
+        if(attack)
+        {
+            window.draw(player.attackRectangle);
+            attack = false;
+        }
 
         mapConnector.updatePlatform(player);
         map = mapConnector.updateMap(player);
+
 
         // Update the window
         window.display();

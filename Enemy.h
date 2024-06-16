@@ -12,6 +12,7 @@ class Enemy : public GameObject<sf::RectangleShape> {
 
     private:
         int damage;
+        int health = 3;
 
     public:
         bool isJumping = false;
@@ -21,12 +22,16 @@ class Enemy : public GameObject<sf::RectangleShape> {
         const float JUMP_STRENGTH = -350.0f;
         const float MOVE_SPEED = 200.0f;
         const float RUN_SPEED = 400.0f;
-        sf::Clock movementClock;
+        sf::Clock movementClock = sf::Clock();
 
         Enemy(const sf::Vector2f size, const sf::Vector2f position, int damage);
 
         void doDamage(Player & p);
         void move();
+
+        int getHearts();
+        int changeHeartsAmount(int amount = 0);
+
 
 };
 

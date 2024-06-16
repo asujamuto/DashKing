@@ -58,9 +58,17 @@ std::vector<Collectible*> Map::generateObjects()
 //                        Collectible(8, sf::Vector2f((shape.getPosition().x + shape.getSize().x) - ((i*30)+ 40), shape.getPosition().y - 20), (i+1)*10)
                         new Collectible(8, sf::Vector2f(lowerBound + (std::rand() % (higherBound - lowerBound) + 1), platforms[j].shape.getPosition().y - 20), (i+1)+(10*j))
                     );
-
 //                    collectibles[collectibles.size() -1].shape.setPosition(lowerBound + (std::rand() % (higherBound - lowerBound) + 1), 20);
                 }
+            }
+
+            if(platforms[j].name_id == "enemyPlatform")
+            {
+                auto starting_pos = sf::Vector2f((platforms[j].shape.getPosition().x + platforms[j].shape.getSize().x)/2,
+                                                  platforms[j].shape.getPosition().y - 40);
+//                Enemy enemy = Enemy(sf::Vector2f(30, 40), sf::Vector2f(600, 550 - 40), 3);
+                auto size = sf::Vector2f(30, 40);
+                enemies.push_back(new Enemy(size, starting_pos, 3));
             }
         }
         wasShown = true;
