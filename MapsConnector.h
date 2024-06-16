@@ -11,7 +11,6 @@
 #include <SFML/Graphics.hpp>
 #include "GameObject.h"
 #include <memory>
-#include "Platform.h"
 #include "Player.h"
 #include <fstream>
 #include "Map.h"
@@ -43,17 +42,17 @@ class MapsConnector {
 
 
 
-        explicit MapsConnector(sf::RenderWindow& main_window)
+        MapsConnector(sf::RenderWindow& main_window)
         {
             window = std::unique_ptr<sf::RenderWindow>(&main_window);
             clock = sf::Clock();
         };
 
-        void updatePlatform(Platform& plat, Player & player);
+        void updatePlatform(Player & player);
 
-        void updateMap();
+        Map updateMap(Player & player);
 
-//        std::vector<Platform> change(int map);
+        Map change(int map);
 //        void generateMaps();
 
 
@@ -61,8 +60,9 @@ class MapsConnector {
 
 //        std::vector<Platform> import(std::string file);
 
-        ~MapsConnector()
+        virtual ~MapsConnector()
         {
+            window.release();
             delete this;
         }
 };

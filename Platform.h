@@ -9,7 +9,6 @@
 #include "GameObject.h"
 #include "Collectible.h"
 #include "Spike.h"
-#include "Player.h"
 
 class Platform : public GameObject<sf::RectangleShape> {
 

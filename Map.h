@@ -26,11 +26,12 @@ public:
     sf::Clock mapClock;
 
     Map(std::vector <Platform> tmp_platforms);
-//    void appendPlatforms(std::vector<Platform> platforms);
 
-//    void collect(Player & player, int index);
+    void collect(Player & player, int i);
 
     std::vector<Collectible> removeCollectible(Collectible& collectible);
+    std::vector<Collectible>::iterator removeCollectible(std::vector<Collectible>::iterator it);
+
     std::vector<Collectible> generateObjects();
 
     std::vector<Collectible> updateObjects();

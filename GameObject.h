@@ -36,6 +36,11 @@ class GameObject {
             shape.setPosition(position);
             shape.setFillColor(sf::Color::Blue);
         }
+
+//        ~GameObject()
+//        {
+//            delete this;
+//        }
 };
 
 

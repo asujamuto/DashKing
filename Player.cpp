@@ -4,7 +4,7 @@
 
 #include "Player.h"
 
-void Player::movement(sf::Clock& clock, std::vector<Platform>& platforms)
+void Player::movement(sf::Clock& clock, std::vector<Platform> & platforms)
 {
     // Get the time since the last frame
     float deltaTime = clock.restart().asSeconds();

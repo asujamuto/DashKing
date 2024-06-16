@@ -6,9 +6,8 @@
 //#define DASHKING_COLLECTIBLE_H
 #pragma once
 #include "GameObject.h"
-#include "Player.h"
 
-class Collectible : public GameObject<sf::CircleShape>
+class Collectible : virtual public GameObject<sf::CircleShape>
 {
 
     public:
@@ -23,6 +22,12 @@ class Collectible : public GameObject<sf::CircleShape>
         }
 
 
+
+//    virtual  ~Collectible()
+//    {
+//        delete this;
+//    }
+
 //        auto hide()
 //        {
 //            if(collected == true)
@@ -30,6 +35,7 @@ class Collectible : public GameObject<sf::CircleShape>
 //
 //            }
 //        }
+
 
 };
 

@@ -3,7 +3,7 @@
 //
 
 #include "Map.h"
-
+#include <fmt/core.h>
 
 Map::Map(std::vector <Platform> tmp_platforms)
 {
@@ -12,20 +12,26 @@ Map::Map(std::vector <Platform> tmp_platforms)
    generateObjects();
 }
 
-//void Map::collect(Player & player, int index)
-//{
-//    if(player.sprite.getGlobalBounds().intersects(collectibles[index].shape.getGlobalBounds()))
-//    {
-//        collectibles.erase(collectibles.begin() + index, collectibles.end() + index);
-//        player.addCoins();
-//    }
-//}
+void Map::collect(Player & player, int i)
+{
+        if(player.sprite.getGlobalBounds().intersects(collectibles[i].shape.getGlobalBounds()))
+        {
+//            collectibles[i].drawable = false;
+            collectibles = removeCollectible(collectibles[i]);
+            player.addCoins();
+        }
+}
 
+std::vector<Collectible>::iterator Map::removeCollectible(std::vector<Collectible>::iterator it) {
+    it = collectibles.erase(it);
+    return it;
+}
 std::vector<Collectible> Map::generateObjects()
 {
     //generate obstacles
     if(wasShown == false)
     {
+        fmt::println("Uruchomiono Generate OBJ");
 
 //        for(int i = 0; i < 2; i++)
 //        {
@@ -67,17 +73,16 @@ std::vector<Collectible> Map::generateObjects()
 
 }
 
-std::vector<Collectible> Map::removeCollectible(Collectible& collectible)
+std::vector<Collectible> Map::removeCollectible(Collectible & collectible)
 {
-//    auto it = std::find(collectibles.begin(), collectibles.end(), collectible.id);
-    for(int i = 0; i  < collectibles.size(); i++)
+    for(int i = 0; i < collectibles.size(); i++)
     {
-        if(collectible.id == collectibles[i].id)
+        if((&collectibles[i]) == (&collectible))
         {
             collectibles.erase(collectibles.begin() + i);
         }
     }
-//    collectibles.erase(std::remove(collectibles.begin(), collectibles.end(), collectible), collectibles.end());
+    collectible.drawable = false;
 
     return collectibles;
 }

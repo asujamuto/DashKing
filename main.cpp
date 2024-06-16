@@ -5,6 +5,7 @@
 #include "MapsConnector.h"
 #include <fmt/core.h>
 #include "Enemy.h"
+//#include <optional>
 
 // Constants
 
@@ -71,17 +72,10 @@ int main()
 
 
 
+
     // Clock for timing
     sf::Clock clock;
 
-//    for(auto & plat : platforms)
-//    {
-//        if(plat.name_id == "platform")
-//        {
-//            collectibles = plat.generateObjects();
-//        }
-//
-//    }
 
 
 
@@ -89,6 +83,8 @@ int main()
     // Main loop
     while (window.isOpen())
     {
+
+
         // Process events
         sf::Event event;
 
@@ -100,110 +96,52 @@ int main()
             }
         }
 
-        // Clear the screen
+        //clear the screen
         window.clear();
 
-        for(auto & heart : hearts)
-        {
-            window.draw(heart);
+//        for(auto & c : map.collectibles)
+//        {
+//            fmt::println("{}", c.id);
+//            window.draw(c.shape);
+//            map.removeCollectible(c);
+//            player.addCoins();
+//        }
+        for (auto it = collectibles.begin(); it != collectibles.end(); /* no increment here */) {
+            fmt::println("Coin: {}", it->id);
+            if(player.sprite.getGlobalBounds().intersects(it -> shape.getGlobalBounds()))
+            {
+                player.addCoins();
+                it = map.removeCollectible(it);
+            }
+            else
+            {
+                window.draw(it->shape);
+            }
+
         }
 
-        //draw special platforms
-        for(auto & plat : map.getPlatforms())
-        {
-            mapConnector.updatePlatform(plat, player);
-        }
-        mapConnector.updateMap();
-        std::vector<Platform> plats = map.platforms;
-        player.movement(clock, plats);
-
-
-
-
-
-        // Draw the player
         window.draw(player.sprite);
 
-        // Draw the platforms
-        for (auto& platform : map.getPlatforms())
+        for(int i =0; i < player.getHearts(); i++)
         {
-            window.draw(platform.shape);
-
-            // Manage collectibles
-//            for(int i = 0; i < platform.collectibles.size(); i++)
-//            {
-////                window.draw(platform.collectibles[i].shape);
-//                if(player.sprite.getGlobalBounds().intersects(platform.collectibles[i].shape.getGlobalBounds()))
-//                {
-//                    platform.removeCollectible(platform.collectibles[i]);
-//                    player.addCoins();
-//                    fmt::println("touching {}", i);
-//                }
-//
-//
-//            }
-//
-//            for(int i = 0; i < map.collectibles.size(); i++)
-//            {
-//                map.collect(player, i);
-//            }
-//            map.collect(player, mapConnector.current_map);
-
-
-
+            window.draw(hearts[i]);
         }
 
+        player.movement(clock, map.platforms);
 
-
-        if(player.sprite.getPosition().x > window.getSize().x )
-        {
-//            platforms = map1.change(map1.current_map + 1);
-            map = mapConnector.maps[mapConnector.current_map + 1];
-            mapConnector.current_map++;
-
-            for(auto & plat : map.getPlatforms())
-            {
-                if(plat.name_id == "platform")
-                {
-                    collectibles = map.updateObjects();
-                    for(auto & collectible : collectibles)
-                    {
-                        window.draw(collectible.shape);
-                    }
-                }
-            }
-//            player.sprite.setPosition(0, platforms[0].shape.getPosition().y - platforms[0].shape.getSize().y);
-            player.sprite.setPosition(0, player.sprite.getPosition().y);
-
-        }
-        else if(player.sprite.getPosition().x < 0 )
-        {
-//            platforms = map1.change(map1.current_map - 1);
-            map = mapConnector.maps[mapConnector.current_map - 1];
-            mapConnector.current_map--;
-
-            for(auto & plat : map.getPlatforms())
-            {
-                if(plat.name_id == "platform")
-                {
-                    collectibles = map.updateObjects();
-                    for(auto & collectible : collectibles)
-                    {
-                        window.draw(collectible.shape);
-                    }
-                }
-
-            }
-            player.sprite.setPosition(window.getSize().x, player.sprite.getPosition().y);
-        }
 
 
         enemy.move();
         enemy.doDamage(player);
-
         window.draw(enemy.shape);
+
+
+        mapConnector.updatePlatform(player);
+        map = mapConnector.updateMap(player);
+
         // Update the window
         window.display();
+
     }
 
     fmt::println("Collected coins: {}", player.getCoins());
