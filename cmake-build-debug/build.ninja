@@ -53,7 +53,7 @@ build CMakeFiles/DashKing.dir/main.cpp.o: CXX_COMPILER__DashKing_unscanned_Debug
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -61,7 +61,7 @@ build CMakeFiles/DashKing.dir/Utils.cpp.o: CXX_COMPILER__DashKing_unscanned_Debu
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Utils.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -69,7 +69,7 @@ build CMakeFiles/DashKing.dir/Player.cpp.o: CXX_COMPILER__DashKing_unscanned_Deb
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Player.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -77,7 +77,7 @@ build CMakeFiles/DashKing.dir/MapsConnector.cpp.o: CXX_COMPILER__DashKing_unscan
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/MapsConnector.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -85,7 +85,7 @@ build CMakeFiles/DashKing.dir/GameObject.cpp.o: CXX_COMPILER__DashKing_unscanned
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/GameObject.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -93,7 +93,7 @@ build CMakeFiles/DashKing.dir/Platform.cpp.o: CXX_COMPILER__DashKing_unscanned_D
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Platform.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -101,7 +101,7 @@ build CMakeFiles/DashKing.dir/Collectible.cpp.o: CXX_COMPILER__DashKing_unscanne
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Collectible.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -109,7 +109,7 @@ build CMakeFiles/DashKing.dir/Spike.cpp.o: CXX_COMPILER__DashKing_unscanned_Debu
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Spike.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -117,7 +117,7 @@ build CMakeFiles/DashKing.dir/Map.cpp.o: CXX_COMPILER__DashKing_unscanned_Debug 
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Map.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -125,7 +125,23 @@ build CMakeFiles/DashKing.dir/Enemy.cpp.o: CXX_COMPILER__DashKing_unscanned_Debu
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles/DashKing.dir/Enemy.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
+  OBJECT_DIR = CMakeFiles/DashKing.dir
+  OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
+
+build CMakeFiles/DashKing.dir/MainMenu.cpp.o: CXX_COMPILER__DashKing_unscanned_Debug /home/pete/CLionProjects/DashKing_v2/MainMenu.cpp || cmake_object_order_depends_target_DashKing
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles/DashKing.dir/MainMenu.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
+  OBJECT_DIR = CMakeFiles/DashKing.dir
+  OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
+
+build CMakeFiles/DashKing.dir/Shop.cpp.o: CXX_COMPILER__DashKing_unscanned_Debug /home/pete/CLionProjects/DashKing_v2/Shop.cpp || cmake_object_order_depends_target_DashKing
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles/DashKing.dir/Shop.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/sfml-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-src/include -I/home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-src/include
   OBJECT_DIR = CMakeFiles/DashKing.dir
   OBJECT_FILE_DIR = CMakeFiles/DashKing.dir
 
@@ -137,7 +153,7 @@ build CMakeFiles/DashKing.dir/Enemy.cpp.o: CXX_COMPILER__DashKing_unscanned_Debu
 #############################################
 # Link the executable DashKing
 
-build DashKing: CXX_EXECUTABLE_LINKER__DashKing_Debug CMakeFiles/DashKing.dir/main.cpp.o CMakeFiles/DashKing.dir/Utils.cpp.o CMakeFiles/DashKing.dir/Player.cpp.o CMakeFiles/DashKing.dir/MapsConnector.cpp.o CMakeFiles/DashKing.dir/GameObject.cpp.o CMakeFiles/DashKing.dir/Platform.cpp.o CMakeFiles/DashKing.dir/Collectible.cpp.o CMakeFiles/DashKing.dir/Spike.cpp.o CMakeFiles/DashKing.dir/Map.cpp.o CMakeFiles/DashKing.dir/Enemy.cpp.o | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-window-s-d.a /usr/lib/libX11.so /usr/lib/libXrandr.so /usr/lib/libXcursor.so _deps/sfml-build/lib/libsfml-system-s-d.a /usr/lib/libGL.so /usr/lib/libudev.so /usr/lib/libfreetype.so || _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build DashKing: CXX_EXECUTABLE_LINKER__DashKing_Debug CMakeFiles/DashKing.dir/main.cpp.o CMakeFiles/DashKing.dir/Utils.cpp.o CMakeFiles/DashKing.dir/Player.cpp.o CMakeFiles/DashKing.dir/MapsConnector.cpp.o CMakeFiles/DashKing.dir/GameObject.cpp.o CMakeFiles/DashKing.dir/Platform.cpp.o CMakeFiles/DashKing.dir/Collectible.cpp.o CMakeFiles/DashKing.dir/Spike.cpp.o CMakeFiles/DashKing.dir/Map.cpp.o CMakeFiles/DashKing.dir/Enemy.cpp.o CMakeFiles/DashKing.dir/MainMenu.cpp.o CMakeFiles/DashKing.dir/Shop.cpp.o | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-window-s-d.a /usr/lib/libX11.so /usr/lib/libXrandr.so /usr/lib/libXcursor.so _deps/sfml-build/lib/libsfml-system-s-d.a /usr/lib/libGL.so /usr/lib/libudev.so /usr/lib/libfreetype.so || _deps/fmt-build/libfmtd.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/fmt-build/libfmtd.a  _deps/sfml-build/lib/libsfml-window-s-d.a  /usr/lib/libX11.so  /usr/lib/libXrandr.so  /usr/lib/libXcursor.so  _deps/sfml-build/lib/libsfml-system-s-d.a  -lpthread  -lrt  /usr/lib/libGL.so  /usr/lib/libudev.so  -ldl  /usr/lib/libfreetype.so
   OBJECT_DIR = CMakeFiles/DashKing.dir
@@ -2008,6 +2024,100 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/install/strip.util: CUSTOM_COMM
 build _deps/sfml-build/src/SFML/Audio/install/strip: phony _deps/sfml-build/src/SFML/Audio/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/pete/CLionProjects/DashKing_v2/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for package
+
+build _deps/nlohmann_json-build/CMakeFiles/package.util: CUSTOM_COMMAND _deps/nlohmann_json-build/all
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/package: phony _deps/nlohmann_json-build/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build _deps/nlohmann_json-build/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cpack --config ./CPackSourceConfig.cmake /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/package_source: phony _deps/nlohmann_json-build/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/nlohmann_json-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/nlohmann_json-build/edit_cache: phony _deps/nlohmann_json-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/nlohmann_json-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/pete/CLionProjects/DashKing_v2 -B/home/pete/CLionProjects/DashKing_v2/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/rebuild_cache: phony _deps/nlohmann_json-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/nlohmann_json-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/nlohmann_json-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/nlohmann_json-build/all
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/install: phony _deps/nlohmann_json-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/nlohmann_json-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/nlohmann_json-build/all
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/install/local: phony _deps/nlohmann_json-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/nlohmann_json-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/nlohmann_json-build/all
+  COMMAND = cd /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build && /home/pete/clion-2023.3.4/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/nlohmann_json-build/install/strip: phony _deps/nlohmann_json-build/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build fmt: phony _deps/fmt-build/libfmtd.a
@@ -2042,7 +2152,7 @@ build sfml-window: phony _deps/sfml-build/lib/libsfml-window-s-d.a
 #############################################
 # Folder: /home/pete/CLionProjects/DashKing_v2/cmake-build-debug
 
-build all: phony DashKing _deps/fmt-build/all _deps/sfml-build/all
+build all: phony DashKing _deps/fmt-build/all _deps/sfml-build/all _deps/nlohmann_json-build/all
 
 # =============================================================================
 
@@ -2050,6 +2160,13 @@ build all: phony DashKing _deps/fmt-build/all _deps/sfml-build/all
 # Folder: /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/fmt-build
 
 build _deps/fmt-build/all: phony _deps/fmt-build/libfmtd.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/pete/CLionProjects/DashKing_v2/cmake-build-debug/_deps/nlohmann_json-build
+
+build _deps/nlohmann_json-build/all: phony
 
 # =============================================================================
 
@@ -2107,14 +2224,14 @@ build _deps/sfml-build/src/SFML/Window/all: phony _deps/sfml-build/lib/libsfml-w
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/pete/CLionProjects/DashKing_v2/CMakeLists.txt /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPack.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPackComponent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindGit.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenAL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/fmt-config.cmake.in _deps/fmt-src/support/cmake/fmt.pc.in _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindUDev.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Network/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/pkg-config/sfml-all.pc.in _deps/sfml-src/tools/pkg-config/sfml-audio.pc.in _deps/sfml-src/tools/pkg-config/sfml-graphics.pc.in _deps/sfml-src/tools/pkg-config/sfml-network.pc.in _deps/sfml-src/tools/pkg-config/sfml-system.pc.in _deps/sfml-src/tools/pkg-config/sfml-window.pc.in
+build build.ninja: RERUN_CMAKE | /home/pete/CLionProjects/DashKing_v2/CMakeLists.txt /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPack.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPackComponent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindGit.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenAL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/fmt-config.cmake.in _deps/fmt-src/support/cmake/fmt.pc.in _deps/nlohmann_json-src/CMakeLists.txt _deps/nlohmann_json-src/cmake/config.cmake.in _deps/nlohmann_json-src/cmake/nlohmann_jsonConfigVersion.cmake.in _deps/nlohmann_json-src/cmake/pkg-config.pc.in _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindUDev.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Network/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/pkg-config/sfml-all.pc.in _deps/sfml-src/tools/pkg-config/sfml-audio.pc.in _deps/sfml-src/tools/pkg-config/sfml-graphics.pc.in _deps/sfml-src/tools/pkg-config/sfml-network.pc.in _deps/sfml-src/tools/pkg-config/sfml-system.pc.in _deps/sfml-src/tools/pkg-config/sfml-window.pc.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/pete/CLionProjects/DashKing_v2/CMakeLists.txt /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPack.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPackComponent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindGit.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenAL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/fmt-config.cmake.in _deps/fmt-src/support/cmake/fmt.pc.in _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindUDev.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Network/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/pkg-config/sfml-all.pc.in _deps/sfml-src/tools/pkg-config/sfml-audio.pc.in _deps/sfml-src/tools/pkg-config/sfml-graphics.pc.in _deps/sfml-src/tools/pkg-config/sfml-network.pc.in _deps/sfml-src/tools/pkg-config/sfml-system.pc.in _deps/sfml-src/tools/pkg-config/sfml-window.pc.in: phony
+build /home/pete/CLionProjects/DashKing_v2/CMakeLists.txt /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPack.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CPackComponent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckFunctionExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/ExternalProject/shared_internal_commands.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FetchContent/CMakeLists.cmake.in /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFontconfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindFreetype.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindGit.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenAL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindOpenGL.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPackageMessage.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindPkgConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/FindX11.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /home/pete/clion-2023.3.4/bin/cmake/linux/x64/share/cmake-3.27/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake _deps/fmt-src/CMakeLists.txt _deps/fmt-src/support/cmake/JoinPaths.cmake _deps/fmt-src/support/cmake/fmt-config.cmake.in _deps/fmt-src/support/cmake/fmt.pc.in _deps/nlohmann_json-src/CMakeLists.txt _deps/nlohmann_json-src/cmake/config.cmake.in _deps/nlohmann_json-src/cmake/nlohmann_jsonConfigVersion.cmake.in _deps/nlohmann_json-src/cmake/pkg-config.pc.in _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindUDev.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Network/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/pkg-config/sfml-all.pc.in _deps/sfml-src/tools/pkg-config/sfml-audio.pc.in _deps/sfml-src/tools/pkg-config/sfml-graphics.pc.in _deps/sfml-src/tools/pkg-config/sfml-network.pc.in _deps/sfml-src/tools/pkg-config/sfml-system.pc.in _deps/sfml-src/tools/pkg-config/sfml-window.pc.in: phony
 
 
 #############################################

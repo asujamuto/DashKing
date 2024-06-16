@@ -23,11 +23,11 @@ void Player::movement(sf::Clock& clock, std::vector<Platform> & platforms)
     float moveX = 0.0f;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        moveX -= currentMoveSpeed * deltaTime;
+        moveX -= currentMoveSpeed * deltaTime - xVelocity;
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        moveX += currentMoveSpeed * deltaTime;
+        moveX += currentMoveSpeed * deltaTime + xVelocity;
     }
     sprite.move(moveX, 0);
 
@@ -130,6 +130,30 @@ void Player::attack()
     }
     attackRectangle = rectangle;
 
+
+
+
+}
+void Player::update()
+{
+    window -> draw(sprite);
+    if(isAttacking)
+    {
+        window -> draw(attackRectangle);
+        isAttacking = false;
+    }
+    if(hearts < 0)
+    {
+        window->clear();
+        window->close();
+        window.release();
+    }
+    for(int i =0; i < hearts; i++)
+    {
+
+        window -> draw(health[i]);
+
+    }
 
 
 

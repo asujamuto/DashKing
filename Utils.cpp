@@ -51,6 +51,14 @@ bool Utils::isColliding(sf::RectangleShape &player, const sf::RectangleShape &sh
     return player.getGlobalBounds().intersects(shape.getGlobalBounds());
 }
 
+bool Utils::isTextClicked(const sf::Text &text, const sf::RenderWindow & window)
+{
+    return text.getGlobalBounds().contains(
+            sf::Mouse::getPosition(window).x,
+            sf::Mouse::getPosition(window).y
+    );
+
+}
 //isColliding for collectibles (coins, keys etc.)
 //bool Utils::isColliding(const & Player  A, const &  Collectible  B) {
 //    return A.sprite.getGlobalBounds().intersects(B.shape.getGlobalBounds());

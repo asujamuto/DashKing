@@ -5,6 +5,8 @@
 #include "MapsConnector.h"
 #include <fmt/core.h>
 #include "Enemy.h"
+#include "MainMenu.h"
+#include "Shop.h"
 //#include <optional>
 
 // Constants
@@ -67,16 +69,18 @@ int main()
     mapConnector.maps.emplace_back(map4);
     Map map = mapConnector.maps[mapConnector.current_map];
 
-    Player player = Player();
+    Player player = Player(window);
 //    auto maps = map1.generateMaps();
     std::vector<Collectible> collectibles;
     std::vector<sf::RectangleShape> hearts = player.Interface(window);
     Enemy enemy = Enemy(sf::Vector2f(30, 40), sf::Vector2f(600, 550 - 40), 3);
 
     sf::Clock clock;
-    bool attack = false;
 
+    MainMenu menu = MainMenu(window);
+    Shop shop = Shop(window);
 
+    int viewChooser = 0;
     while (window.isOpen())
     {
 
@@ -85,46 +89,64 @@ int main()
 
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed || player.getHearts() <= 0 )
+            if (event.type == sf::Event::Closed )
             {
                 window.close();
             }
+            if (viewChooser == 0)
+            {
+                menu.eventChooser(event, viewChooser);
+            }
+            else if (viewChooser == 1)
+            {
+                shop.eventChooser(event, viewChooser);
+            }
+
+            else if(viewChooser == 2)
+            {
+
+                if ( player.getHearts() <= 0 )
+                {
+                    window.close();
+                }
 
             if(event.type == sf::Event::KeyPressed and event.key.code == sf::Keyboard::Q){
-                attack = true;
-                fmt::println("Q pressed");
-                fmt::println("Attack rect x {}", player.attackRectangle.getPosition().x);
-                fmt::println("Attack rect y {}", player.attackRectangle.getPosition().y);
+                player.isAttacking = true;
+//                fmt::println("Q pressed");
+//                fmt::println("Attack rect x {}", player.attackRectangle.getPosition().x);
+//                fmt::println("Attack rect y {}", player.attackRectangle.getPosition().y);
                 window.draw(player.attackRectangle);
                 player.attack();
             }
 
+            }
         }
+
 
         //clear the screen
         window.clear();
 
+        //MAIN MENU
 
-
-        window.draw(player.sprite);
-
-        for(int i =0; i < player.getHearts(); i++)
+        //Code below was copied from https://stackoverflow.com/questions/14505571/centering-text-on-the-screen-with-sfml
+        if(viewChooser == 0)
         {
-            window.draw(hearts[i]);
+            menu.update();
+        }
+        else if(viewChooser == 1)
+        {
+            shop.update();
+        }
+        else if(viewChooser == 2)
+        {
+            player.movement(clock, map.platforms);
+            player.update();
+            mapConnector.updatePlatform(player);
+            map = mapConnector.updateMap(player);
+
         }
 
-        player.movement(clock, map.platforms);
 
-
-
-        if(attack)
-        {
-            window.draw(player.attackRectangle);
-            attack = false;
-        }
-
-        mapConnector.updatePlatform(player);
-        map = mapConnector.updateMap(player);
 
 
         // Update the window

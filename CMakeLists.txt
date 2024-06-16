@@ -15,9 +15,13 @@ FetchContent_Declare(
         GIT_REPOSITORY https://github.com/SFML/SFML.git
         GIT_TAG 2.6.x
 )
+FetchContent_Declare(
+        nlohmann_json
+        GIT_REPOSITORY https://github.com/nlohmann/json.git
+        GIT_TAG v3.11.2  # You can specify a version tag here
+)
 
-
-FetchContent_MakeAvailable(fmt SFML)
+FetchContent_MakeAvailable(fmt SFML nlohmann_json)
 
 add_executable(DashKing main.cpp
         Utils.cpp
@@ -40,14 +44,18 @@ add_executable(DashKing main.cpp
         Map.h
         Enemy.cpp
         Enemy.h
-        MapsConnector.cpp)
-
+        MapsConnector.cpp
+        MainMenu.cpp
+        MainMenu.h
+        Shop.cpp
+        Shop.h
+)
 
 target_link_libraries(DashKing PUBLIC sfml-graphics)
-target_link_libraries(DashKing PRIVATE fmt)
+target_link_libraries(DashKing PRIVATE fmt nlohmann_json::nlohmann_json)
 target_compile_features(DashKing PRIVATE cxx_std_17)
 
-#to tutaj poniżej ustawia domyślną ścieżkę w cmake-build-debug/bin
+# Copy OpenAL DLL on Windows
 if(WIN32)
     add_custom_command(
             TARGET DashKing
